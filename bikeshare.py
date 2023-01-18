@@ -211,6 +211,7 @@ def user_stats(df):
 def display_data(df):
    """ view 5 rows of individual trip data  """
    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n')
+   # To Do : Display the first 5 rows of the data 
    start_loc = 0
    asking = True
    while (asking):
@@ -220,7 +221,7 @@ def display_data(df):
     if view_display == "no": 
       asking = False
 
-    
+   
 def main():
     while True:
         city, month, day = get_filters()
