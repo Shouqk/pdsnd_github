@@ -28,25 +28,23 @@ def get_filters():
         continue     
          # TO DO: get user input for month (all, january, february, ... , june)  
     MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
-    while True:     
-     month = input("\nWhich month would you like to filter by? January, February, March, April, May, June or type 'all' if you do not have any preference?\n").lower()
-     if month not in MONTHS:
+    while True: 
+        month = input("\nWhich month would you like to filter by? January, February, March, April, May, June or type 'all' if you do not have any preference?\n").lower()
+        if month in MONTHS:
+            break
+
         print("Sorry, I didn't catch that. Try again.")
         continue
-     else:
-        break
-
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', \
         'thursday', 'friday', 'saturday' ]
     while True: 
-      day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n").lower()
-      if day not in DAYS:
+        day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n").lower()
+        if day in DAYS:
+            break         
+
         print("Sorry, I didn't catch that. Try again.")
         continue
-      else:
-        break         
-
     print('-'*40)
     return city, month, day
 
